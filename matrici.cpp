@@ -6,7 +6,7 @@ int main()
 {
     int righe = 9;
     int colonne = 9;
-    int somma = 0;
+    // int somma = 0;
     int matrice[righe][colonne];
 
     for (int i = 0; i < righe; i++)
@@ -21,11 +21,18 @@ int main()
                     matrice[i][j] = 0;
                 }
             */
-           // mi sommo tutti i numeri della matrice
-                somma += matrice[i][j];
-           
+            /* mi sommo tutti i numeri della matrice
+                 somma += matrice[i][j];
+            */
         }
     }
+    // stampo 0 sulle diagonali
+
+    for (int i = 0; i < righe ; i++){
+        matrice[i][i] = 0;
+        matrice[i][8-i] = 0;
+    }
+
 
     cout << "    ";
     for (int i = 0; i < colonne; i++)
@@ -52,5 +59,5 @@ int main()
 
         cout << endl;
     }
-    cout << "La somma dei numeri nella matrice è: "<< somma << endl;
+    // cout << "La somma dei numeri nella matrice è: " << somma << endl;
 }
